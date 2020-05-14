@@ -6,16 +6,25 @@ namespace BasicCalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" please enter number 1");
-            int num1 =Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                Console.WriteLine(" please enter number 1");
+                int num1 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine(" please enter number 2");
-            int num2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(" please enter number 2");
+                int num2 = Convert.ToInt32(Console.ReadLine());
+            
 
-
-            Console.WriteLine(" please enter operation(-,+...)");
+            Console.WriteLine(" please enter operation(-,+,/,*)");
             string op = Console.ReadLine();
                 Cal(num1,op,num2);
+            }
+            catch
+            {
+                Console.WriteLine("inter valid number or operation");
+
+            }
+
 
         }
 
